@@ -1,8 +1,13 @@
 import { graphql } from "gatsby"
-import NotFound from "../components/pages/NotFound"
+import Blog from "../components/pages/Blog"
 
 export const query = graphql`
   query ($language: String!) {
+    background: strapiBackground {
+      blog {
+        url
+      }
+    }
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
@@ -15,4 +20,4 @@ export const query = graphql`
   }
 `
 
-export default NotFound
+export default Blog

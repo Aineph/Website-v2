@@ -1,0 +1,23 @@
+@import "../../../../styles";
+
+.pageLayout {
+  padding-top: 65px;
+}
+
+.pageLayoutImage {
+  display: flex;
+  background-position: center top;
+  filter: brightness(0.5);
+  flex-direction: row;
+  height: 100%;
+  justify-content: center;
+  object-fit: cover;
+  width: 100%;
+}
+
+.pageLayoutTitle {
+  color: $imageFontColor;
+  font-size: 2em;
+  padding-bottom: 5em;
+  padding-top: 5em;
+}

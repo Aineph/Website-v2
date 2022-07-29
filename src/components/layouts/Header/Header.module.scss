@@ -1,0 +1,34 @@
+@import "../../../variables";
+
+.header {
+  background-color: $headerBackgroundColor;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed;
+  transition: opacity 0.5s;
+  width: 100%;
+  z-index: 1;
+}
+
+.headerLanguage * {
+  color: $focusColor !important;
+  text-transform: uppercase;
+}
+
+.headerMenu {
+  color: $alternativeFontColor !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.5s;
+}
+
+.headerMenu:hover {
+  color: $focusColor !important;
+}
+
+.headerNavigationCollapse {
+  justify-content: end;
+  width: 100%;
+}

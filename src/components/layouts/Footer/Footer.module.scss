@@ -1,0 +1,43 @@
+@import "../../../variables";
+
+.footer {
+  background-color: $fontColor;
+  color: $imageFontColor;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+}
+
+.footerItem {
+  color: $imageFontColor;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.footerItemLogo {
+  display: flex;
+  justify-content: center;
+}
+
+.footerItemLogoImage {
+  height: 30px;
+  margin: 0;
+}
+
+.footerItemText {
+  display: flex;
+  justify-content: center;
+}
+
+.footerSection {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}

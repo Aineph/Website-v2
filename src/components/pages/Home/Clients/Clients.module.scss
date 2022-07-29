@@ -1,0 +1,11 @@
+.client {
+  width: 300px;
+  height: 100px;
+}
+
+.clients {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

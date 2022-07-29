@@ -1,0 +1,29 @@
+@import "../../../../../animations";
+@import '../../../../../variables';
+
+.serviceCard {
+  border: solid 1px $focusColor;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  width: 300px;
+}
+
+.serviceCard:hover i {
+  animation: up-and-down-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.serviceCardContent {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.serviceCardImage {
+  height: 50px;
+}
