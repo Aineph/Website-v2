@@ -1,0 +1,100 @@
+@import "../../variables";
+
+.mejs__controls:not([style*="display: none"]) {
+  background: $alternativeBackgroundColor;
+}
+
+.mejs__button > button {
+  color: $fontColor;
+  transition: 0.2s;
+  &:active {
+    color: $focusColor;
+    transition: 0.2s;
+  }
+  &:hover {
+    color: $focusColor;
+    transition: 0.2s;
+  }
+}
+
+.mejs__time {
+  color: $alternativeFontColor;
+}
+
+.mejs__time-total,
+.mejs__time-buffering,
+.mejs__time-loaded,
+.mejs__time-current,
+.mejs__time-float,
+.mejs__time-hovered,
+.mejs__time-float-current,
+.mejs__time-float-corner,
+.mejs__time-marker {
+  height: 0.3rem;
+}
+
+.mejs__time-total {
+  background: $imageFontColor;
+  margin: 0.5rem 0 0;
+}
+
+.mejs__time-current,
+.mejs__time-handle-content {
+  background: $focusColor;
+}
+
+.mejs__time-handle-content {
+  border: 0.25rem solid $focusColor;
+  height: 0.625rem;
+  top: -0.4rem;
+}
+
+.mejs__time-float {
+  display: none !important;
+}
+
+.mejs__time-hovered {
+  display: none !important;
+}
+
+.mejs__horizontal-volume-total {
+  background: $imageFontColor;
+  border: none;
+  cursor: pointer;
+  height: 0.2rem;
+  top: 1.2rem;
+}
+
+.mejs__horizontal-volume-current {
+  background: $focusColor;
+}
+
+@mixin iconButton($content) {
+  content: $content;
+  font-family: bootstrap-icons, serif;
+  font-size: 18px;
+  left: 0;
+  padding-top: 0.7em;
+  position: absolute;
+  top: 0;
+}
+
+.mejs__playpause-button.mejs__play button::before {
+  @include iconButton("\F4F4");
+}
+
+.mejs__playpause-button.mejs__pause button::before {
+  @include iconButton("\F4C3");
+}
+
+.mejs__playpause-button.mejs__replay button::before {
+  @include iconButton("\F117");
+}
+
+.mejs__volume-button.mejs__mute button::before {
+  @include iconButton("\F610");
+}
+
+.mejs__volume-button.mejs__unmute button::before {
+  @include iconButton("\F60E");
+}

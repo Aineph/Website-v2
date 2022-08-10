@@ -1,18 +1,20 @@
 import { graphql } from "gatsby"
-import AboutMe from "../components/pages/AboutMe"
+import AboutMePage from "../components/pages/AboutMePage"
 
 export const query = graphql`
   query ($language: String!) {
-    about: strapiAbout(locale: { eq: $language }) {
-      childStrapiAboutContentTextnode {
-        childMarkdownRemark {
-          html
+    background: strapiBackground {
+      about {
+        localFile {
+          url
         }
       }
     }
-    background: strapiBackground {
+    content: strapiPage(locale: { eq: $language }) {
       about {
-        url
+        data {
+          about
+        }
       }
     }
     locales: allLocale(filter: { language: { eq: $language } }) {
@@ -27,4 +29,4 @@ export const query = graphql`
   }
 `
 
-export default AboutMe
+export default AboutMePage

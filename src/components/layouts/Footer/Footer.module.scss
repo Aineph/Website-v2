@@ -4,6 +4,11 @@
   background-color: $fontColor;
   color: $imageFontColor;
   display: flex;
+  flex-direction: column;
+}
+
+.footerBottom {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap-reverse;
   justify-content: space-evenly;
@@ -17,6 +22,7 @@
   justify-content: center;
   padding: 10px;
   text-decoration: none;
+  width: 150px;
 }
 
 .footerItemLogo {
@@ -32,6 +38,23 @@
 .footerItemText {
   display: flex;
   justify-content: center;
+}
+
+.footerRedirection {
+  color: inherit;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.footerRedirection:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.footerRedirections {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
 }
 
 .footerSection {

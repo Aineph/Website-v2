@@ -1,5 +1,5 @@
 import { graphql } from "gatsby"
-import Home from "../components/pages/Home"
+import IndexPage from "../components/pages/IndexPage"
 
 export const query = graphql`
   query ($language: String!) {
@@ -11,19 +11,23 @@ export const query = graphql`
     }
     background: strapiBackground {
       home {
-        url
+        localFile {
+          url
+        }
       }
     }
     clients: allStrapiClient {
       nodes {
         image {
-          url
+          localFile {
+            url
+          }
         }
         name
       }
     }
-    greeting: strapiGreeting(locale: { eq: $language }) {
-      content
+    greeting: strapiContent(locale: { eq: $language }) {
+      greeting
     }
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
@@ -34,12 +38,28 @@ export const query = graphql`
         }
       }
     }
+    projects: allStrapiProject(filter: { locale: { eq: $language } }) {
+      nodes {
+        image {
+          localFile {
+            url
+          }
+        }
+        description
+        name
+        link
+        type
+        year
+      }
+    }
     services: allStrapiService(filter: { locale: { eq: $language } }) {
       nodes {
         name
         description
         image {
-          url
+          localFile {
+            url
+          }
         }
       }
     }
@@ -58,4 +78,4 @@ export const query = graphql`
   }
 `
 
-export default Home
+export default IndexPage

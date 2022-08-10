@@ -1,0 +1,35 @@
+@import "../../../../../variables";
+
+.audioTrack {
+  border: none;
+  border-bottom: solid 1px $alternativeBackgroundColor;
+  border-radius: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.audioTrackDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.audioTrackDuration {
+  color: $alternativeFontColor;
+}
+
+.audioTrackPerformer {
+  color: $focusColor;
+  font-size: 0.8em;
+}
+
+.audioTrackTitle {
+  color: $alternativeFontColor;
+  font-weight: bold;
+}
+
+.audioTrackTitleSelected {
+  color: $fontColor;
+  font-weight: bold;
+}

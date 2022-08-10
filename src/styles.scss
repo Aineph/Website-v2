@@ -651,9 +651,10 @@ pre tt:after {
 .section__title {
   display: flex;
   flex-direction: column;
-  font-size: 3.5em;
+  font-size: 3em;
   font-weight: normal;
-  padding: 10px;
+  padding: 10px 0;
+
   &:after {
     border-bottom: solid 1px $focusColor;
     content: "";

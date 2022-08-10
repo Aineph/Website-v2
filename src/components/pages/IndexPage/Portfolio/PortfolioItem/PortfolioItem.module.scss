@@ -1,0 +1,54 @@
+@import "../../../../../variables";
+
+.portfolioItem {
+  align-items: center;
+  background-size: cover;
+  color: $imageFontColor;
+  display: flex;
+  flex: 1 0 25%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  text-decoration: none;
+  transition: 0.2s;
+  &:after {
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.2s;
+    width: 100%;
+  }
+}
+
+.portfolioItem:hover {
+  color: $imageFontColor;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.portfolioItemDivider {
+  animation: grow-animation;
+  animation-duration: 2s;
+  border-top: solid 3px $focusColor;
+  opacity: 1;
+  padding-left: 5%;
+  padding-right: 5%;
+  z-index: 1;
+}
+
+.portfolioItemText {
+  z-index: 1;
+}
+
+.portfolioItemTitle,
+.portfolioItemType {
+  white-space: nowrap;
+  word-break: keep-all;
+  z-index: 1;
+}

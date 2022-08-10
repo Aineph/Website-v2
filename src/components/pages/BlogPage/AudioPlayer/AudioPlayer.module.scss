@@ -1,0 +1,16 @@
+.audioPlayer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.audioPlayerMedia {
+  width: 100%;
+}
+
+.audioPlayerTracks {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

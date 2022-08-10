@@ -20,4 +20,4 @@ HomeLayout.defaultProps = {
   children: null,
 }
 
-export default HomeLayout
+export default React.memo(HomeLayout)

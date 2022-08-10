@@ -1,0 +1,21 @@
+@import "../../../variables";
+
+.blogRedirection {
+  align-self: flex-end;
+  color: $focusColor;
+  margin-bottom: 10px;
+  text-decoration: none;
+  &:active {
+    color: $focusColor;
+    text-decoration: underline;
+  }
+  &:hover {
+    color: $focusColor;
+    text-decoration: underline;
+  }
+}
+
+.blogSection {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

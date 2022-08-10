@@ -1,0 +1,35 @@
+@import "../../../variables";
+
+.articleTemplateFooter {
+  display: flex;
+  flex-direction: column;
+}
+
+.articleTemplateFooterCategory {
+  margin: 5px;
+}
+
+.articleTemplateFooterLink {
+  color: $focusColor;
+  margin: 5px;
+  text-decoration: none;
+  &:active {
+    color: $focusColor;
+    text-decoration: underline;
+  }
+  &:hover {
+    color: $focusColor;
+    text-decoration: underline;
+  }
+}
+
+.articleTemplateFooterSection {
+  margin: 10px 0;
+}
+
+.articleTemplateFooterNavigation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

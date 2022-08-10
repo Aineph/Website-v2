@@ -1,17 +1,19 @@
 import { graphql } from "gatsby"
-import Gears from "../components/pages/Gears"
+import GearsPage from "../components/pages/GearsPage"
 
 export const query = graphql`
   query ($language: String!) {
     background: strapiBackground {
       gears {
-        url
+        localFile {
+          url
+        }
       }
     }
-    gears: strapiGear(locale: { eq: $language }) {
-      childStrapiGearContentTextnode {
-        childMarkdownRemark {
-          html
+    content: strapiPage(locale: { eq: $language }) {
+      gears {
+        data {
+          gears
         }
       }
     }
@@ -27,4 +29,4 @@ export const query = graphql`
   }
 `
 
-export default Gears
+export default GearsPage

@@ -1,0 +1,75 @@
+@import "../../../../animations";
+@import "../../../../variables";
+
+.heading {
+  background-attachment: fixed;
+  @supports (-webkit-touch-callout: inherit) {
+    background-attachment: scroll;
+  }
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $imageFontColor;
+  display: flex;
+  justify-content: center;
+}
+
+.headingAction {
+  align-self: center;
+  background: transparent;
+  border: solid 1px white;
+  margin: 10px;
+  transition: 0.5s;
+}
+
+.headingAction:hover {
+  align-self: center;
+  background: white;
+  border: solid 1px white;
+  color: $fontColor;
+  transition: 0.5s;
+}
+
+.headingAction:focus {
+  align-self: center;
+  background: white;
+  border: solid 1px white;
+  color: $fontColor;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.headingActions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.headingContent {
+  display: flex;
+  flex-direction: column;
+  margin: 10%;
+}
+
+.headingDescription {
+  align-self: center;
+  font-size: 2em;
+  line-height: 1em;
+  margin: 20px;
+}
+
+.headingDivider {
+  align-self: center;
+  animation: grow-animation;
+  animation-duration: 2s;
+  border-top: solid 1px $imageFontColor;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.headingGreetings {
+  align-self: center;
+  font-size: 4em;
+  line-height: 1em;
+  margin: 20px;
+}

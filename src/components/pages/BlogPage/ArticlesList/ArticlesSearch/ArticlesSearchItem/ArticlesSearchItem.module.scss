@@ -1,0 +1,37 @@
+@import "../../../../../../variables";
+
+@mixin articlesSearchItem {
+  margin: 5px;
+  padding: 5px;
+  text-decoration: none;
+  transition: 0.2s;
+  &:active {
+    background-color: $focusColor;
+    border: solid 1px $focusColor;
+    color: $imageFontColor;
+    text-decoration: none;
+    transition: 0.2s;
+  }
+  &:hover {
+    background-color: $focusColor;
+    border: solid 1px $focusColor;
+    color: $imageFontColor;
+    text-decoration: none;
+    transition: 0.2s;
+  }
+}
+
+.articlesSearchItem {
+  @include articlesSearchItem;
+  border: solid 1px $alternativeFontColor;
+  border-radius: 5px;
+  color: $focusColor;
+}
+
+.articlesSearchItemSelected {
+  @include articlesSearchItem;
+  background-color: $focusColor;
+  border: solid 1px $focusColor;
+  border-radius: 5px;
+  color: $imageFontColor;
+}

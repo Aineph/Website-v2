@@ -1,0 +1,100 @@
+@import "../../../../../variables";
+
+.article {
+  color: $fontColor;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.articleAuthor {
+  color: $alternativeFontColor;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+  &:active {
+    color: $alternativeFontColor;
+    text-decoration: underline;
+  }
+  &:hover {
+    color: $alternativeFontColor;
+    text-decoration: underline;
+  }
+}
+
+.articleCategories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.articleCategory {
+  color: $focusColor;
+  text-decoration: none;
+  &:active {
+    color: $focusColor;
+    text-decoration: underline;
+  }
+  &:hover {
+    color: $focusColor;
+    text-decoration: underline;
+  }
+}
+
+.articleContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+
+.articleCreation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.articleDate {
+  color: $alternativeFontColor;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.articleImage {
+  flex: 0 0 50%;
+  max-width: 300px;
+  padding: 5px;
+}
+
+.articleText {
+  color: $fontColor;
+  flex: 1 0 50%;
+}
+
+.articleTextAlt {
+  color: $alternativeFontColor;
+  &:active {
+    color: $alternativeFontColor;
+  }
+  &:hover {
+    color: $alternativeFontColor;
+  }
+}
+
+.articleTitle {
+  color: $focusColor;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-decoration: none;
+  &:hover {
+    color: $focusColor;
+    text-decoration: underline;
+  }
+  &:active {
+    color: $focusColor;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,11 @@
+@import "../../../variables";
+
+.albumTemplateContent {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.albumTemplateImage {
+  width: 800px;
+}

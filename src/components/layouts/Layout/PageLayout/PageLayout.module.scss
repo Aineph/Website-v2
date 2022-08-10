@@ -1,23 +1,74 @@
+@import "../../../../animations";
 @import "../../../../styles";
 
 .pageLayout {
   padding-top: 65px;
 }
 
+.pageLayoutContent {
+  margin: 20px 10%;
+  @media screen and (max-width: 400px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.pageLayoutDivider {
+  align-self: center;
+  animation: grow-animation;
+  animation-duration: 1s;
+  border-top: solid 2px $focusColor;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 1;
+}
+
 .pageLayoutImage {
+  align-items: center;
+  background-attachment: fixed;
+  @supports (-webkit-touch-callout: inherit) {
+    background-attachment: scroll;
+  }
+  background-size: cover;
+  color: $imageFontColor;
   display: flex;
-  background-position: center top;
-  filter: brightness(0.5);
-  flex-direction: row;
-  height: 100%;
+  flex-direction: column;
+  height: 500px;
   justify-content: center;
   object-fit: cover;
-  width: 100%;
+  position: relative;
+  &:after {
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.pageLayoutSubElement {
+  margin: 20px;
+}
+
+.pageLayoutSubElements {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 1;
+}
+
+.pageLayoutSubTitle {
+  margin: 10px;
+  z-index: 1;
 }
 
 .pageLayoutTitle {
-  color: $imageFontColor;
+  filter: none;
   font-size: 2em;
-  padding-bottom: 5em;
-  padding-top: 5em;
+  z-index: 1;
 }

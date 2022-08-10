@@ -51,7 +51,7 @@ const Header = () => {
   return (
     <Navbar
       className={header}
-      expand={"lg"}
+      expand={"sm"}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       style={{

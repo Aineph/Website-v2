@@ -1,0 +1,72 @@
+@import "../../../../../../variables";
+
+.album {
+  display: flex;
+  flex-direction: column;
+}
+
+.albumContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.albumImage {
+  flex: 1 0 80%;
+  max-width: 700px;
+  padding: 5px;
+}
+
+.albumTrack {
+  border-bottom: solid 1px $alternativeBackgroundColor;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.albumTrackDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.albumTrackDuration {
+  color: $alternativeFontColor;
+}
+
+.albumTrackPerformer {
+  color: $focusColor;
+  font-size: 0.8em;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+.albumTrackTitle {
+  color: $alternativeFontColor;
+  font-weight: bold;
+}
+
+.albumTracks {
+  display: flex;
+  flex: 1 0 20%;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.albumTitle {
+  align-self: center;
+  color: $focusColor;
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
+  word-break: keep-all;
+  white-space: nowrap;
+  &:active {
+    color: $focusColor;
+    text-decoration: underline;
+  }
+  &:hover {
+    color: $focusColor;
+    text-decoration: underline;
+  }
+}

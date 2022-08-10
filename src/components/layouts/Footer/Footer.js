@@ -1,25 +1,39 @@
 import * as React from "react"
 import {
   footer,
+  footerBottom,
   footerItem,
   footerItemLogo,
   footerItemLogoImage,
   footerItemText,
+  footerRedirection,
+  footerRedirections,
   footerSection,
 } from "./Footer.module.scss"
 import { graphql, useStaticQuery } from "gatsby"
+import { Trans } from "react-i18next"
+import { Link } from "gatsby-plugin-react-i18next"
 
 const Footer = () => {
-  const socialMedias = useStaticQuery(graphql`
-    query FooterSocialMediaQuery {
+  const footerLinks = useStaticQuery(graphql`
+    query FooterLinksQuery {
       allStrapiSocialMedia {
         nodes {
           link
           logo {
-            url
+            localFile {
+              url
+            }
           }
           name
           username
+        }
+      }
+      strapiContent {
+        resume {
+          localFile {
+            url
+          }
         }
       }
     }
@@ -27,30 +41,52 @@ const Footer = () => {
 
   return (
     <div className={footer}>
-      <div className={footerSection}>
-        <div>
-          © {new Date().getFullYear()} NICOLAS FEZ, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </div>
+      <div className={footerRedirections}>
+        <Link className={footerRedirection} to={"/"}>
+          <Trans>home</Trans>
+        </Link>
+        <Link className={footerRedirection} to={"/about-me"}>
+          <Trans>about me</Trans>
+        </Link>
+        <Link className={footerRedirection} to={"/blog"}>
+          <Trans>blog</Trans>
+        </Link>
+        <Link className={footerRedirection} to={"/gears"}>
+          <Trans>gears</Trans>
+        </Link>
+        <a
+          className={footerRedirection}
+          href={footerLinks.strapiContent?.resume?.localFile?.url}
+        >
+          <Trans>resume</Trans>
+        </a>
       </div>
-      <div className={footerSection}>
-        {socialMedias.allStrapiSocialMedia?.nodes?.map(socialMedia => (
-          <a
-            className={footerItem}
-            key={socialMedia.name}
-            href={socialMedia.link}
-          >
-            <div className={footerItemLogo}>
-              <img
-                alt={socialMedia.name}
-                className={footerItemLogoImage}
-                src={`${process.env.STRAPI_API_URL}${socialMedia.logo?.url}`}
-              />
-            </div>
-            <div className={footerItemText}>@{socialMedia.username}</div>
-          </a>
-        ))}
+      <div className={footerBottom}>
+        <div className={footerSection}>
+          <div>
+            © {new Date().getFullYear()} NICOLAS FEZ, <Trans>built with</Trans>
+            {` `}
+            <a href="https://www.gatsbyjs.com">Gatsby</a>
+          </div>
+        </div>
+        <div className={footerSection}>
+          {footerLinks.allStrapiSocialMedia?.nodes?.map(socialMedia => (
+            <a
+              className={footerItem}
+              key={socialMedia.name}
+              href={socialMedia.link}
+            >
+              <div className={footerItemLogo}>
+                <img
+                  alt={socialMedia.name}
+                  className={footerItemLogoImage}
+                  src={socialMedia.logo?.localFile?.url}
+                />
+              </div>
+              <div className={footerItemText}>@{socialMedia.username}</div>
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   )
