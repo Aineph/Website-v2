@@ -108,13 +108,13 @@ module.exports = {
       options: {
         trackingIds: [process.env.GA_TRACKING_ID],
         gtagConfig: {
-          anonymize_ip: true,
+          anonymize_ip: false,
           cookie_expires: 0,
         },
         pluginConfig: {
           head: true,
           origin: "https://www.googletagmanager.com",
-          respectDNT: true,
+          respectDNT: false,
         },
       },
     },
