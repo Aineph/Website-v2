@@ -113,7 +113,7 @@ module.exports = {
         },
         pluginConfig: {
           head: true,
-          origin: "https://www.nicolasfez.com",
+          origin: "https://www.googletagmanager.com",
           respectDNT: true,
         },
       },
