@@ -15,6 +15,7 @@ const AboutMePage = ({ data, pageContext }) => {
       title={t("about me")}
     >
       <div
+        className={'ck-content'}
         dangerouslySetInnerHTML={{
           __html: data.content?.about?.data?.about,
         }}

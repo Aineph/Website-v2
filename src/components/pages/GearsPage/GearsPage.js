@@ -15,6 +15,7 @@ const GearsPage = ({ data, pageContext }) => {
       title={t("gears")}
     >
       <div
+        className={'ck-content'}
         dangerouslySetInnerHTML={{
           __html: data.content?.gears?.data?.gears,
         }}

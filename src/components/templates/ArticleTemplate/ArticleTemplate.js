@@ -33,6 +33,7 @@ const ArticleTemplate = ({ data, pageContext }) => {
       title={data.article?.title}
     >
       <div
+        className={'ck-content'}
         dangerouslySetInnerHTML={{
           __html: data.article?.content?.data?.content,
         }}

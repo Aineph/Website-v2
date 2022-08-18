@@ -6,6 +6,7 @@ const NotFoundPage = ({ data }) => {
   return (
     <PageLayout background={data.background?.notfound} title={"404: Not Found"}>
       <div
+        className={'ck-content'}
         dangerouslySetInnerHTML={{
           __html: data.notfound?.data?.notfound,
         }}
