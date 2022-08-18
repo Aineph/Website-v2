@@ -85,8 +85,8 @@ const strapiConfig = {
 module.exports = {
   siteMetadata: {
     title: `Nicolas FEZ`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@aineph`,
+    description: `Hi ! I'm Nicolas Fez. Welcome to my personal website & blog where I post news about my works in computer science and music making.`,
+    author: `Nicolas`,
     siteUrl: `https://www.nicolasfez.com`,
   },
   plugins: [
