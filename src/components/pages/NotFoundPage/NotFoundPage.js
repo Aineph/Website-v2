@@ -8,7 +8,7 @@ const NotFoundPage = ({ data }) => {
       <div
         className={'ck-content'}
         dangerouslySetInnerHTML={{
-          __html: data.notfound?.data?.notfound,
+          __html: data.content?.notfound?.data?.notfound,
         }}
       />
     </PageLayout>
@@ -20,9 +20,11 @@ NotFoundPage.propTypes = {
     background: PropTypes.shape({
       notfound: PropTypes.object.isRequired,
     }).isRequired,
-    notfound: PropTypes.shape({
-      data: PropTypes.shape({
-        notfound: PropTypes.string.isRequired,
+    content: PropTypes.shape({
+      notfound: PropTypes.shape({
+        data: PropTypes.shape({
+          notfound: PropTypes.string.isRequired,
+        }).isRequired,
       }).isRequired,
     }).isRequired,
   }).isRequired,

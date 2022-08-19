@@ -10,19 +10,19 @@ export const query = graphql`
         }
       }
     }
+    content: strapiPage(locale: { eq: $language }) {
+      notfound {
+        data {
+          notfound
+        }
+      }
+    }
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
           ns
           data
           language
-        }
-      }
-    }
-    notfound: strapiPage(locale: { eq: $language }) {
-      notfound {
-        data {
-          notfound
         }
       }
     }
